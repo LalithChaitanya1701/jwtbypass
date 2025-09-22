@@ -1,0 +1,36 @@
+/* Custom styles to enhance Tailwind */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+#login-form input {
+    transition: all 0.3s ease;
+}
+
+#login-form input:focus {
+    border-color: #3b82f6;
+}
+
+#dashboard header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#dashboard aside {
+    min-height: calc(100vh - 80px); /* Adjust for header height */
+}
+
+#content {
+    min-height: 400px;
+    transition: all 0.3s ease;
+}
+
+#welcome-banner {
+    transition: all 0.3s ease;
+}
+
+/* Ensure buttons have a professional banking aesthetic */
+nav button {
+    font-weight: 500;
+}
