@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinCorp Banking Portal</title>
+    <!-- Tailwind CSS CDN for professional styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <!-- Login Page -->
+    <div id="login-form" class="flex items-center justify-center min-h-screen">
+        <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">FinCorp Banking Login</h2>
+            <div class="space-y-4">
+                <input type="text" id="username" placeholder="Username" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="password" id="password" placeholder="Password" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">Sign In</button>
+            </div>
+            <p id="error-message" class="text-red-500 text-center mt-4 hidden"></p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="hidden">
+        <header class="bg-blue-600 text-white py-4 shadow">
+            <div class="container mx-auto px-4">
+                <h1 class="text-2xl font-bold">FinCorp Banking Portal</h1>
+                <p id="user-info" class="text-sm"></p>
+            </div>
+        </header>
+        <!-- Welcome Banner -->
+        <div id="welcome-banner" class="bg-blue-100 border-l-4 border-blue-500 p-4 mx-4 mt-4 rounded">
+            <h2 class="text-xl font-semibold text-blue-800"></h2>
+        </div>
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <aside class="bg-gray-800 text-white w-64 p-4">
+                <nav class="space-y-2">
+                    <button onclick="showHome()" class="w-full text-left px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded transition">Home</button>
+                    <button onclick="showAbout()" class="w-full text-left px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded transition">About FinCorp</button>
+                    <button onclick="showAdmin()" class="w-full text-left px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded transition">Admin Portal</button>
+                </nav>
+            </aside>
+            <!-- Content Area -->
+            <main class="flex-1 p-6">
+                <div id="content" class="bg-white p-6 rounded-lg shadow"></div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
